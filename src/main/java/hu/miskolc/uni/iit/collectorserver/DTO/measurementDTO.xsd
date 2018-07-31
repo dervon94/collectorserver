@@ -1,0 +1,30 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+           targetNamespace="http://uni-miskolc/iit/arduinosens"
+           elementFormDefault="qualified"
+           attributeFormDefault="qualified"
+>
+
+
+    <xs:complexType name="MeasurementDTO">
+        <xs:sequence>
+            <xs:element name="deviceId" type="xs:string"/>
+            <xs:element name="ip-address" type="xs:string"/>
+            <xs:element name="position" type="xs:string"/>
+            <xs:element name="sensorValues">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="rain" type="xs:int"/>
+                        <xs:element name="temperature" type="xs:int"/>
+                        <xs:element name="humidity" type="xs:int"/>
+                        <xs:element name="light" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+
+
+</xs:schema>
