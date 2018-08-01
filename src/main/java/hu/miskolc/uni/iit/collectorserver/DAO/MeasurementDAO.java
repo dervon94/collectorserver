@@ -1,6 +1,6 @@
 package hu.miskolc.uni.iit.collectorserver.DAO;
 
-import hu.miskolc.uni.iit.collectorserver.model.MeasuringDevice;
+import hu.miskolc.uni.iit.model.MeasuringDevice;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
 package hu.miskolc.uni.iit.collectorserver.DAO;
 
 
-import hu.miskolc.uni.iit.collectorserver.model.MeasuringDevice;
-import hu.miskolc.uni.iit.collectorserver.model.repository.MeasuringRepository;
+import hu.miskolc.uni.iit.collectorserver.repository.MeasuringCollectRepository;
+import hu.miskolc.uni.iit.model.MeasuringDevice;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -10,19 +10,19 @@ import java.util.List;
 public class MeasurementMySQLDAO implements MeasurementDAO {
 
     @Autowired
-    MeasuringRepository measuringRepository;
+    MeasuringCollectRepository measuringCollectRepository;
 
     @Override
     public void storeAll(final MeasuringDevice devModel) {
         System.out.println(devModel);
-        this.measuringRepository.save(devModel);
+        this.measuringCollectRepository.save(devModel);
     }
 
     @Override
 
     public List<MeasuringDevice> listAll() {
-        final List<MeasuringDevice> measuringDevices = (List<MeasuringDevice>) this.measuringRepository.findAll();
-        return measuringDevices;
+        return (List<MeasuringDevice>) this.measuringCollectRepository.findAll();
+
     }
 
 

@@ -7,6 +7,7 @@ import hu.miskolc.uni.iit.collectorserver.service.Impl.CollectorServiceImplement
 import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +15,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @SpringBootApplication
 @ComponentScan("hu.miskolc.uni.iit.collectorserver")
+@EntityScan("hu.miskolc.uni.iit.model")
 public class CollectorserverApplication {
 
     public static void main(final String[] args) {

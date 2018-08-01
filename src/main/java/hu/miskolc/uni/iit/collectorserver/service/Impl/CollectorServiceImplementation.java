@@ -2,8 +2,8 @@ package hu.miskolc.uni.iit.collectorserver.service.Impl;
 
 import hu.miskolc.uni.iit.collectorserver.DAO.MeasurementDAO;
 import hu.miskolc.uni.iit.collectorserver.DTO.MeasurementDTO;
-import hu.miskolc.uni.iit.collectorserver.model.MeasuringDevice;
 import hu.miskolc.uni.iit.collectorserver.service.CollectorService;
+import hu.miskolc.uni.iit.model.MeasuringDevice;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package hu.miskolc.uni.iit.collectorserver.model;
+package hu.miskolc.uni.iit.model;
 
 import javax.persistence.*;
 import java.util.HashSet;
