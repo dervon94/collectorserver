@@ -32,7 +32,6 @@ public class CollectorRestController {
     public String listAllConsole() {
         final List<MeasuringDevice> all;
         all = this.collectorService.listAll();
-        System.out.println(all);
         return all.toString();
     }
 

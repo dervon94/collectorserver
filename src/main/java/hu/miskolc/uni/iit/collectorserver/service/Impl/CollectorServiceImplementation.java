@@ -17,7 +17,7 @@ public class CollectorServiceImplementation implements CollectorService {
     public void storeAll(final MeasurementDTO measurement) {
 
 
-        this.measurementDAO.storeAll(new MeasuringDevice(measurement.getDeviceId(), measurement.getIpAddress(), measurement.getPosition(), measurement.getSensorValues().getRain(), measurement.getSensorValues().getTemperature(), measurement.getSensorValues().getHumidity(), measurement.getSensorValues().getLight()));
+        this.measurementDAO.storeAll(new MeasuringDevice(measurement.getDeviceId(), measurement.getIpAddress(), measurement.getPosition(), !measurement.getSensorValues().isRain(), measurement.getSensorValues().getTemperature(), measurement.getSensorValues().getHumidity(), measurement.getSensorValues().getLight()));
 
     }
 

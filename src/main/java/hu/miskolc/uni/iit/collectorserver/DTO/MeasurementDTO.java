@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *                 &lt;sequence>
- *                   &lt;element name="rain" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *                   &lt;element name="rain" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *                   &lt;element name="temperature" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *                   &lt;element name="humidity" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *                   &lt;element name="light" type="{http://www.w3.org/2001/XMLSchema}int"/>
@@ -167,7 +167,7 @@ public class MeasurementDTO {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;sequence>
-     *         &lt;element name="rain" type="{http://www.w3.org/2001/XMLSchema}int"/>
+     *         &lt;element name="rain" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
      *         &lt;element name="temperature" type="{http://www.w3.org/2001/XMLSchema}int"/>
      *         &lt;element name="humidity" type="{http://www.w3.org/2001/XMLSchema}int"/>
      *         &lt;element name="light" type="{http://www.w3.org/2001/XMLSchema}int"/>
@@ -189,7 +189,7 @@ public class MeasurementDTO {
     public static class SensorValues {
 
         @XmlElement(namespace = "http://uni-miskolc/iit/arduinosens")
-        protected int rain;
+        protected boolean rain;
         @XmlElement(namespace = "http://uni-miskolc/iit/arduinosens")
         protected int temperature;
         @XmlElement(namespace = "http://uni-miskolc/iit/arduinosens")
@@ -201,7 +201,7 @@ public class MeasurementDTO {
          * Gets the value of the rain property.
          * 
          */
-        public int getRain() {
+        public boolean isRain() {
             return rain;
         }
 
@@ -209,7 +209,7 @@ public class MeasurementDTO {
          * Sets the value of the rain property.
          * 
          */
-        public void setRain(int value) {
+        public void setRain(boolean value) {
             this.rain = value;
         }
 

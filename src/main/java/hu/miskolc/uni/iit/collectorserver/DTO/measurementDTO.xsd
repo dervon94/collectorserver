@@ -14,7 +14,7 @@
             <xs:element name="sensorValues">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="rain" type="xs:int"/>
+                        <xs:element name="rain" type="xs:boolean"/>
                         <xs:element name="temperature" type="xs:int"/>
                         <xs:element name="humidity" type="xs:int"/>
                         <xs:element name="light" type="xs:int"/>
